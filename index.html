@@ -1,274 +1,111 @@
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بائیک پارٹس آرڈر لسٹ (موبائل رسپانسیو)</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Noto Nastaliq Urdu', serif;
-            margin: 0;
-            padding: 15px;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: right;
-            line-height: 1.6;
-        }
-        h1, h2 {
-            color: #0056b3;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .item-list {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-        .item {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
-        }
-        .item:last-child {
-            border-bottom: none;
-        }
-        .item-name {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            width: 100%;
-            text-align: right;
-        }
-        .quantity-control {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-        .quantity-control input {
-            width: 70px;
-            text-align: center;
-            padding: 8px 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin: 0 10px;
-            font-size: 1.1em;
-        }
-        .quantity-control button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.2em;
-            min-width: 50px;
-        }
-        .quantity-control button:hover {
-            background-color: #0056b3;
-        }
-        .generate-button {
-            display: block;
-            width: calc(100% - 30px);
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 18px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.3em;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .generate-button:hover {
-            background-color: #218838;
-        }
-        #orderOutput {
-            background-color: #e9ecef;
-            padding: 15px;
-            border-radius: 8px;
-            white-space: pre-wrap;
-            font-size: 1.1em;
-            line-height: 1.8;
-            direction: rtl;
-            text-align: right;
-            margin-top: 20px;
-            display: none;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .copy-button {
-            display: block;
-            width: calc(100%);
-            margin: 15px auto 0;
-            padding: 12px;
-            background-color: #6c757d;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            cursor: pointer;
-        }
-        .copy-button:hover {
-            background-color: #5a6268;
-        }
-
-        @media (min-width: 600px) {
-            body {
-                padding: 30px;
-            }
-            .item-list {
-                max-width: 600px;
-                margin: 0 auto 20px auto;
-                padding: 25px;
-            }
-            .item {
-                flex-direction: row;
-                align-items: center;
-            }
-            .item-name {
-                flex-grow: 1;
-                margin-bottom: 0;
-                margin-left: 20px;
-                font-size: 1.1em;
-            }
-            .quantity-control {
-                width: auto;
-            }
-            .quantity-control input {
-                width: 60px;
-                padding: 5px;
-                font-size: 1em;
-            }
-            .quantity-control button {
-                padding: 5px 10px;
-                font-size: 1em;
-            }
-            .generate-button {
-                width: calc(100% - 60px);
-            }
-            #orderOutput {
-                max-width: 600px;
-                margin: 20px auto 0 auto;
-                padding: 25px;
-            }
-            .copy-button {
-                width: 100%;
-            }
-        }
-    </style>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>بائیک پارٹس آرڈر لسٹ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>بائیک سپیئر پارٹس آرڈر سسٹم</h1>
-    <div class="item-list">
-        <h2>آئٹمز کی فہرست</h2>
+  <h1>بائیک سپیئر پارٹس آرڈر سسٹم</h1>
 
-        <div class="item" data-name="ٹائر">
-            <span class="item-name">ٹائر</span>
-            <div class="quantity-control">
-                <button onclick="changeQuantity(this, -1)">-</button>
-                <input type="number" value="0" min="0">
-                <button onclick="changeQuantity(this, 1)">+</button>
-            </div>
-        </div>
+  <div class="item-list">
+    <h2>آئٹمز کی فہرست</h2>
 
-        <div class="item" data-name="چین سیٹ">
-            <span class="item-name">چین سیٹ</span>
-            <div class="quantity-control">
-                <button onclick="changeQuantity(this, -1)">-</button>
-                <input type="number" value="0" min="0">
-                <button onclick="changeQuantity(this, 1)">+</button>
-            </div>
-        </div>
-
-        <div class="item" data-name="بریک شو">
-            <span class="item-name">بریک شو</span>
-            <div class="quantity-control">
-                <button onclick="changeQuantity(this, -1)">-</button>
-                <input type="number" value="0" min="0">
-                <button onclick="changeQuantity(this, 1)">+</button>
-            </div>
-        </div>
-
-        <div class="item" data-name="پلگ">
-            <span class="item-name">پلگ</span>
-            <div class="quantity-control">
-                <button onclick="changeQuantity(this, -1)">-</button>
-                <input type="number" value="0" min="0">
-                <button onclick="changeQuantity(this, 1)">+</button>
-            </div>
-        </div>
-
-        <div class="item" data-name="آئل فلٹر">
-            <span class="item-name">آئل فلٹر</span>
-            <div class="quantity-control">
-                <button onclick="changeQuantity(this, -1)">-</button>
-                <input type="number" value="0" min="0">
-                <button onclick="changeQuantity(this, 1)">+</button>
-            </div>
-        </div>
-
+    <div class="item" data-name="ٹائر">
+      <span class="item-name">ٹائر</span>
+      <div class="quantity-control">
+        <button onclick="changeQuantity(this, -1)">-</button>
+        <input type="number" value="0" min="0">
+        <button onclick="changeQuantity(this, 1)">+</button>
+      </div>
     </div>
 
-    <button class="generate-button" onclick="generateOrderList()">آرڈر لسٹ بنائیں</button>
-
-    <div id="orderOutput">
-        <h2>آپ کا آرڈر</h2>
-        <pre id="orderText"></pre>
-        <button class="copy-button" onclick="copyOrderText()">کاپی کریں</button>
+    <div class="item" data-name="چین سیٹ">
+      <span class="item-name">چین سیٹ</span>
+      <div class="quantity-control">
+        <button onclick="changeQuantity(this, -1)">-</button>
+        <input type="number" value="0" min="0">
+        <button onclick="changeQuantity(this, 1)">+</button>
+      </div>
     </div>
 
-    <script>
-        function changeQuantity(button, delta) {
-            const input = button.parentNode.querySelector('input');
-            let currentValue = parseInt(input.value);
-            currentValue += delta;
-            if (currentValue < 0) currentValue = 0;
-            input.value = currentValue;
+    <div class="item" data-name="بریک شو">
+      <span class="item-name">بریک شو</span>
+      <div class="quantity-control">
+        <button onclick="changeQuantity(this, -1)">-</button>
+        <input type="number" value="0" min="0">
+        <button onclick="changeQuantity(this, 1)">+</button>
+      </div>
+    </div>
+
+    <div class="item" data-name="پلگ">
+      <span class="item-name">پلگ</span>
+      <div class="quantity-control">
+        <button onclick="changeQuantity(this, -1)">-</button>
+        <input type="number" value="0" min="0">
+        <button onclick="changeQuantity(this, 1)">+</button>
+      </div>
+    </div>
+
+    <div class="item" data-name="آئل فلٹر">
+      <span class="item-name">آئل فلٹر</span>
+      <div class="quantity-control">
+        <button onclick="changeQuantity(this, -1)">-</button>
+        <input type="number" value="0" min="0">
+        <button onclick="changeQuantity(this, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="generate-button" onclick="generateOrderList()">آرڈر لسٹ بنائیں</button>
+
+  <div id="orderOutput">
+    <h2>آپ کا آرڈر</h2>
+    <pre id="orderText"></pre>
+    <button class="copy-button" onclick="copyOrderText()">کاپی کریں</button>
+  </div>
+
+  <script>
+    function changeQuantity(button, delta) {
+      const input = button.parentNode.querySelector("input");
+      let currentValue = parseInt(input.value);
+      currentValue += delta;
+      if (currentValue < 0) currentValue = 0;
+      input.value = currentValue;
+    }
+
+    function generateOrderList() {
+      const items = document.querySelectorAll(".item");
+      let orderList = "آرڈر کی فہرست:\n\n";
+      let hasItems = false;
+
+      items.forEach((item) => {
+        const itemName = item.getAttribute("data-name");
+        const quantity = parseInt(item.querySelector("input").value);
+        if (quantity > 0) {
+          orderList += `${itemName}: ${quantity} عدد\n`;
+          hasItems = true;
         }
+      });
 
-        function generateOrderList() {
-            const items = document.querySelectorAll('.item');
-            let orderList = "آرڈر کی فہرست:\n\n";
-            let hasItems = false;
+      if (!hasItems) {
+        orderList = "کوئی آئٹم منتخب نہیں کی گئی ہے۔";
+      }
 
-            items.forEach(item => {
-                const itemName = item.getAttribute('data-name');
-                const quantityInput = item.querySelector('input');
-                const quantity = parseInt(quantityInput.value);
+      document.getElementById("orderText").innerText = orderList;
+      document.getElementById("orderOutput").style.display = "block";
+    }
 
-                if (quantity > 0) {
-                    orderList += `${itemName}: ${quantity} عدد\n`;
-                    hasItems = true;
-                }
-            });
-
-            if (!hasItems) {
-                orderList = "کوئی آئٹم منتخب نہیں کی گئی ہے۔";
-            }
-
-            document.getElementById('orderText').innerText = orderList;
-            document.getElementById('orderOutput').style.display = 'block';
-        }
-
-        function copyOrderText() {
-            const orderTextElement = document.getElementById('orderText');
-            const textToCopy = orderTextElement.innerText;
-
-            navigator.clipboard.writeText(textToCopy)
-                .then(() => {
-                    alert('آرڈر کی فہرست کاپی کر لی گئی ہے!');
-                })
-                .catch(err => {
-                    alert('کاپی کرنے میں مسئلہ پیش آیا: ' + err);
-                });
-        }
-    </script>
+    function copyOrderText() {
+      const textToCopy = document.getElementById("orderText").innerText;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert("آرڈر کی فہرست کاپی کر لی گئی ہے!");
+      }).catch(err => {
+        alert("کاپی کرنے میں مسئلہ پیش آیا: " + err);
+      });
+    }
+  </script>
 </body>
 </html>
