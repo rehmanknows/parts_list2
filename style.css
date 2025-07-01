@@ -1,0 +1,155 @@
+       body {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            margin: 0;
+            padding: 15px;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: right;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .item-list {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .item:last-child {
+            border-bottom: none;
+        }
+        .item-name {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: right;
+        }
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .quantity-control input {
+            width: 70px;
+            text-align: center;
+            padding: 8px 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+        .quantity-control button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            min-width: 50px;
+        }
+        .quantity-control button:hover {
+            background-color: #0056b3;
+        }
+        .generate-button {
+            display: block;
+            width: calc(100% - 30px);
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 18px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.3em;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .generate-button:hover {
+            background-color: #218838;
+        }
+        #orderOutput {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            font-size: 1.1em;
+            line-height: 1.8;
+            direction: rtl;
+            text-align: right;
+            margin-top: 20px;
+            display: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .copy-button {
+            display: block;
+            width: calc(100%);
+            margin: 15px auto 0;
+            padding: 12px;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        .copy-button:hover {
+            background-color: #5a6268;
+        }
+
+        @media (min-width: 600px) {
+            body {
+                padding: 30px;
+            }
+            .item-list {
+                max-width: 600px;
+                margin: 0 auto 20px auto;
+                padding: 25px;
+            }
+            .item {
+                flex-direction: row;
+                align-items: center;
+            }
+            .item-name {
+                flex-grow: 1;
+                margin-bottom: 0;
+                margin-left: 20px;
+                font-size: 1.1em;
+            }
+            .quantity-control {
+                width: auto;
+            }
+            .quantity-control input {
+                width: 60px;
+                padding: 5px;
+                font-size: 1em;
+            }
+            .quantity-control button {
+                padding: 5px 10px;
+                font-size: 1em;
+            }
+            .generate-button {
+                width: calc(100% - 60px);
+            }
+            #orderOutput {
+                max-width: 600px;
+                margin: 20px auto 0 auto;
+                padding: 25px;
+            }
+            .copy-button {
+                width: 100%;
+            }
+        }
+    
