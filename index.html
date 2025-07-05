@@ -5,113 +5,736 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>بائیک پارٹس آرڈر لسٹ</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="test.css" />
 </head>
 <body>
+
+    <script>
+  function resetQuantity(button) {
+    const item = button.closest(".item");
+    item.dataset.quantity = "0";
+    const badge = item.querySelector(".badge");
+    badge.textContent = "0";
+  }
+</script>
+
+
   <h1>ایم فیاض آٹو سپئر پارٹس</h1>
 
   <div class="item-list">
-    <h2>آئٹمز کی فہرست</h2>
+    <h2>RS - آئٹمز کی فہرست</h2>
 
-    <!--item-->
+    <!-- ایک آئٹم کی مثال -->
 
-    <div class="item" data-name="سٹن سیٹ (STD)">
-      <img src="items\piston.png" alt="سٹن سیٹ (STD)" class="item-image">
-      <span class="item-name">پسٹن سیٹ (STD)</span>
-      <div class="quantity-control">
-        <button onclick="changeQuantity(this, -1)">-</button>
-        <input type="number" value="0" min="0">
-        <button onclick="changeQuantity(this, 1)">+</button>
-      </div>
-    </div>
 
-        <!--item-->
+<div class="item" data-name="RS - پسٹن سیٹ (STD)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/piston.png" alt="RS - پسٹن سیٹ (STD)" class="item-image">
+    <span class="badge">0</span>
+  </div>
 
-    <div class="item" data-name="پسٹن سیٹ (50.+)">
-      <img src="items\piston.png" alt="پسٹن سیٹ (50.+)" class="item-image">
-      <span class="item-name">پسٹن سیٹ (50.+)</span>
-      <div class="quantity-control">
-        <button onclick="changeQuantity(this, -1)">-</button>
-        <input type="number" value="0" min="0">
-        <button onclick="changeQuantity(this, 1)">+</button>
-      </div>
-    </div>
+  <div class="item-footer">
+    <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+    <span class="item-name">RS - پسٹن سیٹ (STD)</span>
+  </div>
+</div>
 
-        <!--item-->
+<div class="item" data-name="RS - پسٹن سیٹ (50.+)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/piston.png" alt="RS - پسٹن سیٹ (50.+)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - پسٹن سیٹ (50.+)</span>
+</div>
 
-    <div class="item" data-name="پسٹن سیٹ (1.00+)">
-      <img src="items\piston.png" alt="پسٹن سیٹ (1.00+)" class="item-image">
-      <span class="item-name">پسٹن سیٹ (1.00+)</span>
-      <div class="quantity-control">
-        <button onclick="changeQuantity(this, -1)">-</button>
-        <input type="number" value="0" min="0">
-        <button onclick="changeQuantity(this, 1)">+</button>
-      </div>
-    </div>
 
-        <!--item-->
+<div class="item" data-name="RS - پسٹن سیٹ (1.00+)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/piston.png" alt="RS - پسٹن سیٹ (1.00+)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - پسٹن سیٹ (1.00+)</span>
+</div>
 
-    <div class="item" data-name="پسٹن سیٹ (1.50+)">
-      <img src="items\piston.png" alt="پسٹن سیٹ (1.50+)" class="item-image">
-      <span class="item-name">پسٹن سیٹ (1.50+)</span>
-      <div class="quantity-control">
-        <button onclick="changeQuantity(this, -1)">-</button>
-        <input type="number" value="0" min="0">
-        <button onclick="changeQuantity(this, 1)">+</button>
-      </div>
-    </div>
 
-        <!--item-->
+<div class="item" data-name="RS - پسٹن سیٹ (1.50+)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/piston.png" alt="RS - پسٹن سیٹ (1.50+)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - پسٹن سیٹ (1.50+)</span>
+</div>
 
-    <div class="item" data-name=" رنگ سیٹ (STD)">
-      <img src="items\ring.png" alt="رنگ سیٹ (STD)" class="item-image">
-      <span class="item-name"> رنگ سیٹ (STD)</span>
-      <div class="quantity-control">
-        <button onclick="changeQuantity(this, -1)">-</button>
-        <input type="number" value="0" min="0">
-        <button onclick="changeQuantity(this, 1)">+</button>
-      </div>
-    </div>
+<div class="item" data-name="RS - رنگ سیٹ (STD)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/ring.png" alt="RS - رنگ سیٹ (STD)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - رنگ سیٹ (STD)</span>
+</div>
 
-        <!--item-->
 
-    <div class="item" data-name=" رنگ سیٹ (50.+)">
-      <img src="items\ring.png" alt="رنگ سیٹ (50.+)" class="item-image">
-      <span class="item-name"> رنگ سیٹ (50.+)</span>
-      <div class="quantity-control">
-        <button onclick="changeQuantity(this, -1)">-</button>
-        <input type="number" value="0" min="0">
-        <button onclick="changeQuantity(this, 1)">+</button>
-      </div>
-    </div>
 
-        <!--item-->
 
-    <div class="item" data-name=" رنگ سیٹ (1.00+)">
-      <img src="items\ring.png" alt="رنگ سیٹ (1.00+)" class="item-image">
-      <span class="item-name"> رنگ سیٹ (1.00+)</span>
-      <div class="quantity-control">
-        <button onclick="changeQuantity(this, -1)">-</button>
-        <input type="number" value="0" min="0">
-        <button onclick="changeQuantity(this, 1)">+</button>
-      </div>
-    </div>
+<div class="item" data-name="RS - رنگ سیٹ (50.+)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/ring.png" alt="RS - رنگ سیٹ (50.+)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - رنگ سیٹ (50.+)</span>
+</div>
 
-        <!--item-->
 
-    <div class="item" data-name=" رنگ سیٹ (1.50+)">
-      <img src="items\ring.png" alt="رنگ سیٹ (1.50+)" class="item-image">
-      <span class="item-name"> رنگ سیٹ (1.50+)</span>
-      <div class="quantity-control">
-        <button onclick="changeQuantity(this, -1)">-</button>
-        <input type="number" value="0" min="0">
-        <button onclick="changeQuantity(this, 1)">+</button>
-      </div>
-    </div>
 
-        <!--item-->
 
-    <!-- مزید آئٹمز یہاں اسی فارمیٹ میں ایڈ کر لیں -->
+
+<div class="item" data-name="RS - رنگ سیٹ (1.00+)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/ring.png" alt="RS - رنگ سیٹ (1.00+)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - رنگ سیٹ (1.00+)</span>
+</div>
+
+
+
+
+
+<div class="item" data-name="RS - رنگ سیٹ (1.50+)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/ring.png" alt="RS - رنگ سیٹ (1.50+)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - رنگ سیٹ (1.50+)</span>
+</div>
+
+<div class="item" data-name="RS -  کون راڈ (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/conrod.png" alt="RS -  کون راڈ (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS -  کون راڈ (150cc لوڈر)</span>
+</div>
+
+
+
+
+
+
+
+
+<div class="item" data-name="RS - کیم گراری (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cam.png" alt="RS - کیم گراری (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کیم گراری (150cc لوڈر)</span>
+</div>
+
+
+
+
+
+
+
+<div class="item" data-name="RS - راکڑ سیٹ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/rocker.PNG" alt="RS - راکڑ سیٹ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - راکڑ سیٹ</span>
+</div>
+
+
+
+<div class="item" data-name="RS - کلچ بکسہ (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cb.png" alt="RS - کلچ بکسہ (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کلچ بکسہ (150cc لوڈر)</span>
+</div>
+
+
+
+
+
+
+
+
+<div class="item" data-name="RS - کلچ کولہ  (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cc.png" alt="RS - کلچ کولہ  (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کلچ کولہ  (150cc لوڈر)</span>
+</div>
+
+<div class="item" data-name="RS - کلچ پلیٹ  (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cp.png" alt="RS - کلچ پلیٹ  (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کلچ پلیٹ  (150cc لوڈر)</span>
+</div>
+
+
+
+<div class="item" data-name="RS - پریشر پلیٹ  (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cp1.png" alt="RS - پریشر پلیٹ  (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - پریشر پلیٹ  (150cc لوڈر)</span>
+</div>
+
+
+
+<div class="item" data-name="RS - کلچ کولہ گراری سمیت (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/ccg.png" alt="RS - کلچ کولہ گراری سمیت (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کلچ کولہ گراری سمیت (150cc لوڈر)</span>
+</div>
+
+<div class="item" data-name="RS -سلنڈر پسٹن کٹ مکمل (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cpk.png" alt="RS - سلنڈر پسٹن کٹ مکمل (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS -سلنڈر پسٹن کٹ مکمل (150cc لوڈر)</span>
+</div>
+
+
+
+
+
+<div class="item" data-name="CDI - RS یونٹ (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cdi.png" alt="CDI - RS یونٹ (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">CDI - RS یونٹ (150cc لوڈر)</span>
+</div>
+
+
+
+
+
+<div class="item" data-name="CDI - RS یونٹ (200cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cdi.png" alt="CDI - RS یونٹ (200cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">CDI - RS یونٹ (200cc لوڈر)</span>
+</div>
+
+
+
+<div class="item" data-name="RS - سلف کپی" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/ck.png" alt="RS - سلف کپی" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - سلف کپی</span>
+</div>
+
+<div class="item" data-name="RS - کوائل کڑہ 8 پول" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cc8.png" alt="RS - کوائل کڑہ 8 پول" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کوائل کڑہ 8 پول</span>
+</div>
+
+
+
+
+<div class="item" data-name="RS - کوائل کڑہ 11 پول" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cc11.png" alt="RS - کوائل کڑہ 11 پول" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کوائل کڑہ 11 پول</span>
+</div>
+
+
+
+<div class="item" data-name="RS - کوائل کڑہ 12 پول" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cc11.png" alt="RS - کوائل کڑہ 12 پول" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کوائل کڑہ 12 پول</span>
+</div>
+
+<div class="item" data-name="RS - کوائل کڑہ 18 پول" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cc11.png" alt="RS - کوائل کڑہ 18 پول" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کوائل کڑہ 18 پول</span>
+</div>
+
+
+
+
+
+<div class="item" data-name="RS - سلف بیرنگ 3 گولی والا" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/sb3-6.png" alt="RS - سلف بیرنگ 3 گولی والا" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - سلف بیرنگ 3 گولی والا</span>
+</div>
+
+
+
+<div class="item" data-name="RS - سلف بیرنگ 6 گولی والا" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/sb3-6.png" alt="RS - سلف بیرنگ 6 گولی والا" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - سلف بیرنگ 6 گولی والا</span>
+</div>
+
+
+
+<div class="item" data-name="RS - کلچ کیبل (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/ccl.png" alt="RS - کلچ کیبل (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کلچ کیبل (150cc لوڈر)</span>
+</div>
+
+
+
+<div class="item" data-name="RS - ریس کیبل (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/rcl.png" alt="RS - ریس کیبل (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - ریس کیبل (150cc لوڈر)</span>
+</div>
+
+<div class="item" data-name="RS - کلچ کیبل (200cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/ccl.png" alt="RS - کلچ کیبل (200cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - کلچ کیبل (200cc لوڈر)</span>
+</div>
+
+<div class="item" data-name="RS - ریس کیبل (200cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/rcl.png" alt="RS - ریس کیبل (200cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - ریس کیبل (200cc لوڈر)</span>
+</div>
+
+<div class="item" data-name="RS - گرپ سیٹ NA - کھلا بور" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/gs.png" alt="RS - گرپ سیٹ NA - کھلا بور" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - گرپ سیٹ NA - کھلا بور</span>
+</div>
+
+
+
+<div class="item" data-name="RS - گرپ سیٹ RP - تنگ بور" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/gs.png" alt="RS - گرپ سیٹ RP - تنگ بور" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">RS - گرپ سیٹ RP - تنگ بور</span>
+</div>
+
+
+
+<div class="item" data-name="32009 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="32009 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">32009 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="6009 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6009 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6009 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="6008 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6008 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6008 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="6007 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6007 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6007 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="6206 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6206 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6206 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="6205 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6205 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6205 - بیرنگ</span>
+</div>
+    
+<div class="item" data-name="6204 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6204 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6204 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="6203 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6203 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6203 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="6202 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6202 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6202 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="6200 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6200 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6200 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="6302 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="6302 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">6302 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="30205 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="30205 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">30205 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="30204 - بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/b.png" alt="30204 - بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">30204 - بیرنگ</span>
+</div>
+
+<div class="item" data-name="57*20 کراس  بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cb2057.png" alt="57*20 کراس بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">57*20 کراس بیرنگ</span>
+</div>
+
+<div class="item" data-name="55*22 کراس  بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cb2057.png" alt="55*22 کراس بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">55*22 کراس بیرنگ</span>
+</div>
+
+<div class="item" data-name="55*20 کراس  بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cb2057.png" alt="55*20 کراس بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">55*20 کراس بیرنگ</span>
+</div>
+
+<div class="item" data-name="50*20 کراس  بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cb2057.png" alt="50*20 کراس بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+      
+  <span class="item-name">50*20 کراس بیرنگ</span>
+</div>
+
+<div class="item" data-name="44*19 کراس  بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cb2057.png" alt="44*19 کراس بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">44*19 کراس بیرنگ</span>
+</div>
+
+<div class="item" data-name="28 کراس  بیرنگ" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cb2057.png" alt="28 کراس بیرنگ" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">28 کراس بیرنگ</span>
+</div>
+
+<div class="item" data-name="50*20 کراس مکمل لوہے والا" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/cmlw.png" alt="50*20 کراس مکمل لوہے والا" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">50*20 کراس مکمل لوہے والا</span>
+</div>
+
+<div class="item" data-name="پھول گراری 12 دندے والی (300cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/mg11-12-13.png" alt="پھول گراری 12 دندے والی(300cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">پھول گراری 12 دندے والی(300cc لوڈر) </span>
+</div>
+
+<div class="item" data-name="پھول گراری 13 دندے والی(150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/mg11-12-13.png" alt="پھول گراری 13 دندے والی (150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+      
+  <span class="item-name">پھول گراری 13 دندے والی(150cc لوڈر)</span>
+</div>
+
+<div class="item" data-name="پھول گراری 12 دندے والی (150cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/mg11-12-13.png" alt="پھول گراری 12 دندے والی(150cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">پھول گراری 12 دندے والی(150cc لوڈر) </span>
+</div>
+
+<div class="item" data-name="پھول گراری 11 دندے والی(150cc لوڈر) " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/mg11-12-13.png" alt="پھول گراری 11 دندے والی(150cc لوڈر) " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> پھول گراری 11 دندے والی(150cc لوڈر) </span>
+</div>
+
+<div class="item" data-name="پھول گراری 13 دندے والی(110cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/mg11-12-13.png" alt="پھول گراری 13 دندے والی (110cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">پھول گراری 13 دندے والی(110cc لوڈر)</span>
+</div>
+
+<div class="item" data-name="پھول گراری 12 دندے والی (110cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/mg11-12-13.png" alt="پھول گراری 12 دندے والی(110cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name">پھول گراری 12 دندے والی(110cc لوڈر) </span>
+</div>
+
+<div class="item" data-name="پھول گراری 11 دندے والی(110cc لوڈر) " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/mg11-12-13.png" alt="پھول گراری 11 دندے والی(110cc لوڈر) " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> پھول گراری 11 دندے والی(110cc لوڈر) </span>
+</div>
+
+<div class="item" data-name="20*17*15 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="20*17*15 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 20*17*15 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="17*17*15 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="17*17*15 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 17*17*15 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="17*10*16 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="17*10*16 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 17*10*16 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="20*10*16 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="20*10*16 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 20*10*16 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="20*17*16 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="20*17*16 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 20*17*16 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="17*17*16 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="17*17*16 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 17*17*16 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="20*17*14 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="20*17*14 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 20*17*14 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="20*10*15 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="20*10*15 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 20*10*15 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="20*9*15 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="20*9*15 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 20*9*15 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="17*4*16 فرنٹ گیئر گراری " data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="17*4*16 فرنٹ گیئر گراری " class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 17*4*16 فرنٹ گیئر گراری </span>
+</div>
+
+<div class="item" data-name="20*10*15 فرنٹ گیئر گراری (300cc لوڈر)" data-quantity="0" onclick="increaseQuantity(this)">
+  <div class="image-container">
+    <img src="items/fgg.png" alt="20*10*15 فرنٹ گیئر گراری (300cc لوڈر)" class="item-image">
+    <span class="badge">0</span>
+  </div>
+      <button class="reset-button" onclick="event.stopPropagation(); resetQuantity(this)">⨉</button>
+  <span class="item-name"> 20*10*15 فرنٹ گیئر گراری (300cc لوڈر)</span>
+</div>
+
+
+
+
+
+    <!-- مزید آئٹمز اسی طرح یہاں شامل کریں -->
   </div>
 
   <button class="generate-button" onclick="generateOrderList()">آرڈر لسٹ بنائیں</button>
@@ -123,12 +746,11 @@
   </div>
 
   <script>
-    function changeQuantity(button, delta) {
-      const input = button.parentNode.querySelector("input");
-      let currentValue = parseInt(input.value);
-      currentValue += delta;
-      if (currentValue < 0) currentValue = 0;
-      input.value = currentValue;
+    function increaseQuantity(itemElement) {
+      let quantity = parseInt(itemElement.getAttribute("data-quantity")) || 0;
+      quantity++;
+      itemElement.setAttribute("data-quantity", quantity);
+      itemElement.querySelector(".badge").innerText = quantity;
     }
 
     function generateOrderList() {
@@ -138,7 +760,7 @@
 
       items.forEach((item) => {
         const itemName = item.getAttribute("data-name");
-        const quantity = parseInt(item.querySelector("input").value);
+        const quantity = parseInt(item.getAttribute("data-quantity"));
         if (quantity > 0) {
           orderList += `${itemName}: ${quantity} عدد\n`;
           hasItems = true;
